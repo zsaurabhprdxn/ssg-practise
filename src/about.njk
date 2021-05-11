@@ -8,3 +8,9 @@ layout: base.njk
     <h1> This is the about page </h1>
     <p> Its a testing page with using njk </p>
 </div>
+
+{% for item in news %}
+
+<a href="/{{ item.country }}">{{ item.country }} </a>
+
+{% endfor %}

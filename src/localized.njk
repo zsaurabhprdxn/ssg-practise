@@ -1,6 +1,11 @@
 ---
-title: A static site index page
+title: Daily Briefing
 layout: base.njk
+pagination: 
+    data: news
+    size: 1
+    alias: news
+permalink: /{{ news.country }}/index.html
 ---
 
 
@@ -12,7 +17,7 @@ layout: base.njk
         <div class="sub-content">With love ❤ !</div>
 
         <ul>
-        {% for article in news[1].articles  %}
+        {% for article in news.articles  %}
             <li>
                 <h2> <a href='{{article.url}}'>{{article.title}}</a></h2>
                 <span> {{article.source.name}} - {{article.publishedAt}} </span>
